@@ -13,6 +13,17 @@ class AuthControler extends Controller
         return User::all();
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return User::find($id);
+    }
+
     public function register(Request $request) {
         $fields = $request->validate([
             'name' => 'required|string',
@@ -78,5 +89,16 @@ class AuthControler extends Controller
         return [
             'message' => 'Logged out'
         ];
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        return User::destroy($id);
     }
 }
