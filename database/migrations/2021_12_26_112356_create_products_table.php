@@ -20,6 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('location');
             $table->string('description');
             $table->string('image');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

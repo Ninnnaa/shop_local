@@ -14,5 +14,6 @@ class Product extends Model
         'location',
         'description',
         'image',
+        'user_id',
     ];
 }

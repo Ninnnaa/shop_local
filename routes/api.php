@@ -18,6 +18,8 @@ Route::delete('/users/{id}', [AuthControler::class, 'destroy']);
 Route::post('/products', [ProductController::class, 'store']);
 Route::put('/products/{id}', [ProductController::class, 'update']);
 Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+Route::get('/producer-products/{id}', [ProductController::class, 'appProductsByProducer']);
+
 
 // auth routes
 Route::post('/register', [AuthControler::class, 'register']);
