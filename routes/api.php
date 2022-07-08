@@ -9,6 +9,7 @@ use App\Http\Controllers\EventController;
 //Route::resource('/products', ProductController::class);
 
 //public routes
+
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::get('/products/search/{name}', [ProductController::class, 'search']);
